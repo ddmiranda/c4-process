@@ -79,8 +79,8 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 1. Os antigos nomes DEVERÃO serão reutilizados por novos contratos.
 
 ### 2.7. Administração do Projeto
-1. Os fundadores do projeto devem atuar como Administradores para gerenciar o conjunto de projetos do Maintainers.
-1. Os Administradores DEVEM garantir sua própria sucessão ao longo do tempo, promovendo os Manutenção mais efetivos.
-1. Um novo Colaborador que faz correções corretas, que compreende claramente os objetivos do projeto, e o processo DEVE ser convidado a se tornar um Maintainer.
-1. Os administradores DEVEM remover os usuários que estão inativos por um longo período de tempo ou que repetidamente não conseguem aplicar esse processo com precisão.
-1. Os administradores DEVEM bloquear ou proibir "atores ruins" que causam estresse e dor aos outros no projeto. Isso deve ser feito após a discussão pública, com a chance de todas as partes falarem. Um ator ruim é alguém que ignora repetidamente as regras e a cultura do projeto, que é desnecessariamente argumentativo ou hostil, ou que é ofensivo e que não consegue auto-corrigir seu comportamento quando solicitado por outros.
+1. Os fundadores do projeto DEVERÃO atuar como Administradores para gerenciar o conjunto de projetos dos Mantenedores.
+1. Os Administradores DEVERÃO garantir sua própria sucessão ao longo do tempo, promovendo os Mantenedores mais efetivos.
+1. Um novo Colaborador que faz patchs corretos, que compreende claramente os objetivos do projeto, e o processo DEVERIA ser convidado a se tornar um Mantenedor.
+1. Os Administradores DEVERIAM remover os Mantenedores que estão inativos por um longo período de tempo ou que repetidamente não conseguem aplicar esse processo com precisão.
+1. Os Administradores DEVERIAM bloquear ou proibir "atores ruins" que causam estresse e dor aos outros no projeto. Isso deveria ser feito após a discussão pública, com a chance de todas as partes falarem. Um ator ruim é alguém que ignora repetidamente as regras e a cultura do projeto, que é desnecessariamente argumentativo ou hostil, ou que é ofensivo e que não consegue auto-corrigir seu comportamento quando solicitado por outros.
