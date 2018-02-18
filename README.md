@@ -1,32 +1,31 @@
 # Contrato de Construção de Código Coletivo Tupiniquim 
 
 ## Abstrato
-O C4T fornece um processo padrão para contribuir, avaliar e discutir melhorias em projetos de software. Ele define requisitos técnicos específicos para projetos como um guia de estilo, testes de unidade git plataformas similares. Ele também estabelece personagens diferentes para projetos, com tarefas claras e distintas. C4T especifica um processo para documentar e discutir questões, incluindo busca de consenso e descrições claras, uso de "requisic" e revisões sistemáticas.
+O C4T fornece um processo padrão para contribuir, avaliar e discutir melhorias em projetos de software. Ele define requisitos técnicos específicos para projetos como um guia de estilo, testes de unidade git plataformas similares. Ele também estabelece personagens diferentes para projetos, com tarefas claras e distintas. C4T especifica um processo para documentar e discutir questões, incluindo busca de consenso e descrições claras, uso de "requisição de merge" e revisões sistemáticas.
 
 ## Língua
-As palavras-chave "DEVE", "NÃO DEVEM", "REQUERIDO", "DEVERIAM", "NÃO DEVERIAM", "RECOMENDADO" e "OPCIONAL" neste documento são para ser interpretado como descrito na RFC 2119.
+As palavras-chave "DEVE", "NÃO DEVE", "DEVERÁ", "NÃO DEVERIA", "REQUERIDO", "DEVERIAM", "NÃO DEVERIAM", "RECOMENDADO" e "OPCIONAL" neste documento são para ser interpretado como descrito na RFC 2119.
 
 ## 1. Objetivos
-O C4 destina-se a fornecer um modelo de colaboração ideal reutilizável para projetos de software de código aberto. Tem esses objetivos específicos:
-
+O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para projetos de software de código aberto. Tem esses objetivos específicos:
 1. Para maximizar a escala e a diversidade da comunidade em torno de um projeto, reduzindo a fricção para novos Colaboradores e criando um modelo de participação escalonado com fortes feedbacks positivos;
-2. Para aliviar as dependências em indivíduos-chave, separando diferentes conjuntos de habilidades para que haja um pool maior de competências em qualquer domínio requerido;
-3. Permitir que o projeto se desenvolva de forma mais rápida e precisa, aumentando a diversidade do processo de tomada de decisão;
-4. Apoiar o ciclo de vida natural das versões do projeto, desde o experimento até o estável, permitindo experiências seguras, falhas rápidas e isolamento de código estável;
-5. Para reduzir a complexidade interna dos repositórios de projetos, facilitando assim a colaboração dos Colaboradores e reduzindo a margem de erro;
-5. Forçar a apropriação coletiva do projeto, o que aumenta o incentivo econômico aos Contribuintes e reduz o risco de seqüestro por entidades hostis.
+1. Para aliviar as dependências em indivíduos-chave, separando diferentes conjuntos de habilidades para que haja um pool maior de competências em qualquer domínio requerido;
+1. Permitir que o projeto se desenvolva de forma mais rápida e precisa, aumentando a diversidade do processo de tomada de decisão;
+1. Apoiar o ciclo de vida natural das versões do projeto, desde o experimento até o estável, permitindo experiências seguras, falhas rápidas e isolamento de código estável;
+1. Para reduzir a complexidade interna dos repositórios de projetos, facilitando assim a participaço dos Colaboradores e reduzindo a margem de erro;
+1. Forçar a apropriação coletiva do projeto, o que aumenta o incentivo econômico aos Contribuintes e reduz o risco de seqüestro por entidades hostis.
 
 ## 2. Design
 ### 2.1. Preliminares
 1. O projeto DEVERÁ usar o sistema de controle de revisão distribuído git.
-1. O projeto será hospedado em github.com ou equivalente, aqui chamado "Plataforma".
+1. O projeto DEVERÁ ser hospedado em gitlab corporativo ou equivalente, aqui chamado "Plataforma".
 1. O projeto DEVERÁ usar o rastreador de problemas da Plataforma.
-1. O projeto DEVE ter diretrizes claramente documentadas para o estilo de código.
-1. Um "Colaborador" é uma pessoa que deseja fornecer um patch, sendo um conjunto de compromissos que resolvem algum problema claramente identificado.
-1. Um "Maintainer" é uma pessoa que combina os patches com o projeto. Os fabricantes não são desenvolvedores; seu trabalho é fazer cumprir o processo.
-1. Contributors NÃO DEVERÁ ter acesso ao repositório, a menos que também sejam Maintainers.
-1. Os CONSERVADORES DEVERÃO ter acesso ao repositório.
-Todos, sem distinção ou discriminação, DEVEM ter o mesmo direito de se tornar um Contribuidor nos termos deste contrato.
+1. O projeto DEVERÁ ter diretrizes claramente documentadas para o estilo de código.
+1. Um "Colaborador" é uma pessoa que, por meio de uma "requisição de merge", deseja fornecer um patch sendo um conjunto de commits que resolvem algum problema claramente identificado.
+1. Um "Mantenedor" é uma pessoa que combina os patches com o projeto. Os Mantenedores não são desenvolvedores; seu trabalho é fazer cumprir o processo.
+1. Os Mantenedores DEVERÃO ter acesso ao branch master, aqui chamado de "Repositório".
+1. Contribuidores NÃO DEVERÃO ter acesso ao repositório, a menos que também sejam Mantenedores.
+1. Todos, sem distinção ou discriminação, DEVEM ter o mesmo direito de se tornar um Contribuidor nos termos deste contrato.
 
 ### 2.2. Licenciamento e propriedade
 1. O projeto DEVERÁ usar uma licença compartilhada, como o MPLv2, ou uma variante GPLv3 (GPL, LGPL, AGPL).
