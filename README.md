@@ -26,8 +26,8 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 1. Merge é o processo de cobinar um patch com o projeto.
 1. Um "Mantenedor" é uma pessoa que faz o merge dos patchs. Os Mantenedores não são desenvolvedores; seu trabalho é fazer cumprir o processo.
 1. Um "Colaborador" é uma pessoa que deseja fornecer um patch.
-1. Os Mantenedores DEVERÃO ter acesso ao branch master, aqui chamado de "repositório".
-1. Os Colaboradores NÃO DEVERÃO ter acesso ao repositório, a menos que também sejam Mantenedores.
+1. Os Mantenedores DEVERÃO ter acesso ao branch master.
+1. Os Colaboradores NÃO DEVERÃO ter acesso ao branch master, a menos que também sejam Mantenedores.
 1. Todos, sem distinção ou discriminação, DEVERÃO ter o mesmo direito de se tornar um Contribuidor nos termos deste contrato.
 
 ### 2.2. Licenciamento e propriedade
@@ -53,13 +53,14 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
       - ex. "contribuinte: Validar dv do cnpj";
     - uma linha em branco seguida da solução proposta, com margem de até 72 caractéres;
     - uma linha em branco seguido dos metadados Resolve, Relatado-por, Criado-por, Revisado-por, Testado-por.
-1. Um "Patch Correto" é aquele que satisfaz os requisitos acima, como no exemplo abaixo.
+1. Um "Patch Correto" é aquele que satisfaz os requisitos acima e possuí uma mensagem adequada como no exemplo abaixo.
 
 ```
 contribuinte: Validar dv do cnpj
    
 Atualmente, ao pesquisar uma Pessoa Júridica com um cnpj com dv 
 inválido, uma mensagem diferente de "Cnpj Inválido." é exibida.
+Exibir essa mensagem facilitará a identificação de erro de digitação.
   
 Para resolver isso, a exceção CNPJInvalido foi criada e será lançada 
 sempre que a regra de cálculo do DV não for satisfeita. As fachadas
@@ -76,29 +77,30 @@ Testado-por: Aspone Corleone <acorleone@hacker.com>
 ```
 
 ### 2.4. Processo de desenvolvimento
-1. A mudança no projeto DEVERÁ ser regida pelo padrão de identificar com precisão relatos e aplicar soluções mínimas e precisas a esses relatos.
-1. Para solicitar alterações, um usuário DEVERIA registrar um relato no rastreador de relatos da Plataforma do projeto.
+1. A mudança no projeto DEVERÁ ser regida pelo padrão de identificar com precisão problemas e aplicar soluções mínimas e precisas a esses problemas.
+1. Para solicitar alterações, um usuário DEVERIA registrar um problema no rastreador de problemas da Plataforma do projeto.
 1. O usuário ou o Colaborador DEVERIA registar descrevendo o problema que enfrentam ou observam.
 1. O usuário ou o Colaborador DEVERIA buscar consenso sobre a precisão de suas observações e o valor de resolver o relato.
-1. Os usuários NÃO DEVERIAM registrar solicitações de recursos, idéias, sugestões ou quaisquer soluções para problemas que não estão explicitamente documentados e prováveis.
-1. Assim, o histórico de lançamento do projeto DEVERÁ ser uma lista de relatos significativos registrados e resolvidos.
-1. Para trabalhar em um relatos, um Colaborador DEVERÁ criar um branch privado a partir do repositório do projeto e, em seguida, trabalhar nele.
+1. Os usuários NÃO DEVERIAM registrar solicitações de recursos, idéias, sugestões ou quaisquer soluções para problemas que não estão explicitamente documentados ou são prováveis.
+1. Assim, o histórico de lançamento do projeto DEVERÁ ser uma lista de probelmas significativos registrados e resolvidos.
+1. Para trabalhar em um problema, um Colaborador DEVERÁ criar um branch privado a partir do branch master do projeto e, em seguida, trabalhar nele.
 1. Para enviar um patch, um Colaborador DEVERÁ criar uma requisição de merge na Plataforma do projeto.
-1. Um Colaborador NÃO DEVERÁ enviar alterações diretamente para o repositório do projeto.
+1. Um Colaborador NÃO DEVERÁ enviar alterações diretamente para o branch master do projeto.
 1. Para discutir um patch, as pessoas podem comentar a requisição de merge da Platforma, no commit ou em outro lugar.
 1. Para aceitar ou rejeitar um patch, um Mantenedor DEVERÁ usar a interface Platforma.
-1. Os Mantenedores NÃO DEVERÃO fundir seus próprios patches, exceto em casos excepcionais, como a falta de capacidade de resposta de outros Mantenedores por um período prolongado (mais de 1-2 dias).
+1. Os Mantenedores NÃO DEVERÃO fazer merge de seus próprios patches, exceto em casos excepcionais, como a falta de capacidade de resposta de outros Mantenedores por um período prolongado (mais de 1-2 dias).
 1. Os Mantenedores NÃO DEVERÃO fazer julgamentos de valor nos patches corretos.
 1. Os Mantenedores DEVERÃO fazer o merge dos patches corretos de outros Contribuidores rapidamente.
 1. Os Mantenedores PODERÃO fazer merge de patches incorretos de outros Colaboradores com os objetivos de (a) terminar discussões infrutíferas, (b) capturar patches tóxicos no registro histórico, (c) se envolver com o Colaborador na melhoria da qualidade de seu patch.
-1. O usuário que registrou um relato DEVERIA encerrá-lo depois de verificar se o patch foi bem-sucedido.
-1. Qualquer Colaborador que tenha julgamentos de valor em um patch DEVERIA expressá-los através de seus próprios patches.
+1. O usuário que registrou um problema DEVERIA encerrá-lo depois de verificar se o patch foi bem-sucedido.
+1. Qualquer Colaborador que tenha julgamentos de valor em um patch DEVERIA expressá-los através de seus próprios patchs.
 1. Os Mantenedores DEVERIAM fechar problemas de usuários que são deixados abertos sem ação por um período desconfortável.
 
 ### 2.5. Branches e Releases
 1. O projeto DEVERÁ ter um branch ("master") que sempre contém a versão mais recente em progresso e DEVERIA sempre passar nos testes de build.
-1. Os branchs privados DEVERÃO sobreviver apenas ao pequeno período do processo de requisição de merge, devendo ser excluídos ao final do processo. 
-1. Para fazer uma versão estável, um Mantenedor DEVERÁ aplicar uma tag no repositório. Os lançamentos estáveis sempre DEVERÃO ser liberados do branch master.
+1. Os patchs DEVERÃO ser desenvolvidos em seus próprios branchs privados.
+1. Os branchs privados DEVERÃO ser locais e DEVERIAM ser enviados ao repositório remoto apenas durante o pequeno período do processo de requisição de merge. Eles DEVERÃO ser excluídos ao final do processo. 
+1. Para fazer uma versão estável, um Mantenedor DEVERÁ aplicar uma tag no branch master. Os lançamentos estáveis sempre DEVERÃO ser liberados do branch master.
 
 ### 2.6. Evolução de Contratos Públicos
 1. Todos os Contratos Públicos (APIs ou protocolos) DEVERÃO ser documentados.
