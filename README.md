@@ -51,15 +51,27 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
       - conjugada no tempo verbal futuro do presente do modo indicativo,
       - ser capaz de completar a frase "Se aplicado, este patch irá <linha de assunto>",
       - ex. "contribuinte: Validar dv do cnpj";
-    - uma linha em branco seguida da solução proposta;
-    - uma linha em branco seguido dos metadados:
-      - "Resolve: idDoProblema",
-      - "Criado-por: Nome do Desenvolvedor <email@dominio.com>",
-      - "Revisado-por: Nome do Revisor <email@dominio.com>",
-      - "Testado-por: Nome do Testador <email@dominio.com>",
-      - "Sugerido-por: Nome <email@dominio.com>",
-      - "Reportado-por: Nome <email@dominio.com>";
+    - uma linha em branco seguida da solução proposta, com margem de até 72 caractéres;
+    - uma linha em branco seguido dos metadados Resolve, Criado-por, Revisado-por, Testado-por, Sugerido-por, Reportado-por.
 1. Um "Patch Correto" é aquele que satisfaz os requisitos acima.
+```
+    contribuinte: Validar dv do cnpj
+
+    Atualmente não existe nenhuma validação para o DV (dígito verificador)
+    do cnpj, ocasionando chamadas desnecessárias ao banco de dados.
+    
+    Para resolver isso, a exceção CNPJInvalido foi criada e será lançada 
+    sempre que a regra de cálculo do DV não for satisfeita. As fachadas
+    também foram alteradas para traduzir essa exceção em uma mensagem 
+    de usuário.
+    
+    Resolve: #1234
+    Criado-por: Siclano Torvalds <storvalds@hacker.com>
+    Criado-por: Beltrano Torvalds <btorvalds@hacker.com>
+    Revisado-por: Frazano Beck <fbeck@hacker.com>
+    Revisado-por: Beck Bauer <bbauer@hacker.com>
+    Testado-por: Aspone Corleone <acorleone@hacker.com>
+```
 
 ### 2.4. Processo de desenvolvimento
 1. A mudança no projeto DEVERÁ ser regida pelo padrão de identificar com precisão relatos e aplicar soluções mínimas e precisas a esses relatos.
