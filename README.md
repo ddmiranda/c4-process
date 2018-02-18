@@ -40,7 +40,7 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 1. Um patch DEVERÁ respeitar as diretrizes de estilo de código do projeto se estas forem definidas.
 1. Um patch DEVERÁ respeitar as diretrizes de "Evolução de Contratos Públicos" definidas abaixo.
 1. Um patch NÃO DEVERÁ incluir código não trivial de outros projetos, a menos que o Colaborador seja o autor original desse código.
-1. Um patch DEVERÁ ser afetatar apenas um componente.
+1. Um patch DEVERÁ ser afetar apenas um componente.
 1. Um patch DEVERÁ compilar de forma limpa e passar nos auto-testes do projeto ao menos para a principal plataforma de destino.
 1. Um patch DEVERÁ deve conter uma mensagem de commit composta por:
     - uma unica linha de assunto informando o problema sendo resolvido de forma:
@@ -52,24 +52,25 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
       - ser capaz de completar a frase "Se aplicado, este patch irá <linha de assunto>",
       - ex. "contribuinte: Validar dv do cnpj";
     - uma linha em branco seguida da solução proposta, com margem de até 72 caractéres;
-    - uma linha em branco seguido dos metadados Resolve, Criado-por, Revisado-por, Testado-por, Sugerido-por, Reportado-por.
-1. Um "Patch Correto" é aquele que satisfaz os requisitos acima.
+    - uma linha em branco seguido dos metadados Resolve, Criado-por, Revisado-por, Testado-por, Relatado-por.
+1. Um "Patch Correto" é aquele que satisfaz os requisitos acima, como no exemplo abaixo.
 ```
     contribuinte: Validar dv do cnpj
-
-    Atualmente não existe nenhuma validação para o DV (dígito verificador)
-    do cnpj, ocasionando chamadas desnecessárias ao banco de dados.
     
+    Atualmente, ao pesquisar uma Pessoa Júridica com um cnpj com dv 
+    inválido, uma mensagem diferente de "Cnpj Inválido." é exibida.
+  
     Para resolver isso, a exceção CNPJInvalido foi criada e será lançada 
     sempre que a regra de cálculo do DV não for satisfeita. As fachadas
-    também foram alteradas para traduzir essa exceção em uma mensagem 
-    de usuário.
+    também foram alteradas para traduzir essa exceção na mensagem 
+    esperada pelo usuário.
     
     Resolve: #1234
+    Relatado-por: Josenildo Produtctowner <jprodutctowner@hacker.com>
     Criado-por: Siclano Torvalds <storvalds@hacker.com>
     Criado-por: Beltrano Torvalds <btorvalds@hacker.com>
     Revisado-por: Frazano Beck <fbeck@hacker.com>
-    Revisado-por: Beck Bauer <bbauer@hacker.com>
+    Revisado-por: Beckham Bauer <bbauer@hacker.com>
     Testado-por: Aspone Corleone <acorleone@hacker.com>
 ```
 
