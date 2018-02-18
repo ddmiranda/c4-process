@@ -51,27 +51,28 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
       - conjugada no tempo verbal futuro do presente do modo indicativo,
       - ser capaz de completar a frase "Se aplicado, este patch irá <linha de assunto>",
       - ex. "contribuinte: Validar dv do cnpj";
-    - uma linha em branco seguida da solução proposta, com margem de até 72 caractéres;
-    - uma linha em branco seguido dos metadados Resolve, Criado-por, Revisado-por, Testado-por, Relatado-por.
+    - uma linha em branco seguida da solução proposta, com margem de até 72 caractéres;
+    - uma linha em branco seguido dos metadados Resolve, Relatado-por, Criado-por, Revisado-por, Testado-por.
 1. Um "Patch Correto" é aquele que satisfaz os requisitos acima, como no exemplo abaixo.
+
 ```
-    contribuinte: Validar dv do cnpj
-    
-    Atualmente, ao pesquisar uma Pessoa Júridica com um cnpj com dv 
-    inválido, uma mensagem diferente de "Cnpj Inválido." é exibida.
+contribuinte: Validar dv do cnpj
+   
+Atualmente, ao pesquisar uma Pessoa Júridica com um cnpj com dv 
+inválido, uma mensagem diferente de "Cnpj Inválido." é exibida.
   
-    Para resolver isso, a exceção CNPJInvalido foi criada e será lançada 
-    sempre que a regra de cálculo do DV não for satisfeita. As fachadas
-    também foram alteradas para traduzir essa exceção na mensagem 
-    esperada pelo usuário.
+Para resolver isso, a exceção CNPJInvalido foi criada e será lançada 
+sempre que a regra de cálculo do DV não for satisfeita. As fachadas
+também foram alteradas para traduzir essa exceção na mensagem 
+esperada pelo usuário.
     
-    Resolve: #1234
-    Relatado-por: Josenildo Produtctowner <jprodutctowner@hacker.com>
-    Criado-por: Siclano Torvalds <storvalds@hacker.com>
-    Criado-por: Beltrano Torvalds <btorvalds@hacker.com>
-    Revisado-por: Frazano Beck <fbeck@hacker.com>
-    Revisado-por: Beckham Bauer <bbauer@hacker.com>
-    Testado-por: Aspone Corleone <acorleone@hacker.com>
+Resolve: #1234
+Relatado-por: Josenildo Produtctowner <jprodutctowner@hacker.com>
+Criado-por: Siclano Torvalds <storvalds@hacker.com>
+Criado-por: Beltrano Torvalds <btorvalds@hacker.com>
+Revisado-por: Frazano Beck <fbeck@hacker.com>
+Revisado-por: Beckham Bauer <bbauer@hacker.com>
+Testado-por: Aspone Corleone <acorleone@hacker.com>
 ```
 
 ### 2.4. Processo de desenvolvimento
