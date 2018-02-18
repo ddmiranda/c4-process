@@ -19,9 +19,9 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 ### 2.1. Preliminares
 1. O projeto DEVERÁ usar o sistema de controle de revisão distribuído git.
 1. O projeto DEVERÁ ser hospedado em gitlab corporativo ou equivalente, aqui chamado "Plataforma".
-1. O projeto DEVERÁ usar o rastreador de problemas da Plataforma.
+1. O projeto DEVERÁ usar o rastreador de relatos da Plataforma.
 1. O projeto DEVERÁ ter diretrizes claramente documentadas para o estilo de código.
-1. Um "Colaborador" é uma pessoa que, por meio de uma "requisição de merge", deseja fornecer um patch sendo um conjunto de commits que resolvem algum problema claramente identificado.
+1. Um "Colaborador" é uma pessoa que, por meio de uma "requisição de merge", deseja fornecer um patch sendo um conjunto de commits que resolvem algum relato claramente identificado.
 1. Um "Mantenedor" é uma pessoa que combina os patches com o projeto. Os Mantenedores não são desenvolvedores; seu trabalho é fazer cumprir o processo.
 1. Os Mantenedores DEVERÃO ter acesso ao branch master, aqui chamado de "Repositório".
 1. Contribuidores NÃO DEVERÃO ter acesso ao repositório, a menos que também sejam Mantenedores.
@@ -35,39 +35,38 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 
 ### 2.3. Requisitos do patch
 1. Mantenedores e Colaboradores DEVEM ter uma conta da Plataforma e DEVEM usar seus nomes reais ou um apelido bem conhecido.
-1. Um patch DEVE ser uma resposta mínima e precisa para exatamente um problema identificado e acordado.
+1. Um patch DEVE ser uma resposta mínima e precisa para exatamente um relato identificado e acordado.
 1. Um patch DEVE respeitar as diretrizes de estilo de código do projeto se estas forem definidas.
 1. Um patch DEVE respeitar as diretrizes de "Evolução de Contratos Públicos" definidas abaixo.
 1. Um patch NÃO DEVE incluir código não trivial de outros projetos, a menos que o Contribuinte seja o autor original desse código.
 1. Um patch DEVE compilar de forma limpa e passar nos auto-testes do projeto ao menos para a principal plataforma de destino.
-1. Uma mensagem de commit de patch DEVE ser composta por uma única linha curta (menos de 50 caracteres) informando o problema sendo resolvido, uma linha em branco seguida da solução proposta, uma linha em brando e a relação de Colaboradores e suas participações no patch.
+1. Uma mensagem de commit de patch DEVE ser composta por uma única linha curta (menos de 50 caracteres) informando o relato sendo resolvido, uma linha em branco seguida da solução proposta, uma linha em brando e a relação de Colaboradores e suas participações no patch.
 1. Um "Correto Patch" é aquele que satisfaz os requisitos acima.
 
 ### 2.4. Processo de desenvolvimento
-1. A mudança no projeto será regida pelo padrão de identificar com precisão problemas e aplicar soluções mínimas e precisas a esses problemas.
-1. Para solicitar alterações, um usuário DEVE registrar um problema no rastreador de problemas de plataforma do projeto.
-1. O usuário ou colaborador DEVE escrever o problema descrevendo o problema que enfrentam ou observam.
-1. O usuário ou colaborador DEVE buscar consenso sobre a precisão de suas observações e o valor de resolver o problema.
-1. Os usuários NÃO devem registrar solicitações de recursos, idéias, sugestões ou quaisquer soluções para problemas que não estão explicitamente documentados e prováveis.
-1. Assim, o histórico de lançamento do projeto será uma lista de problemas significativos registrados e resolvidos.
-1. Para trabalhar em um problema, um colaborador DEVE FORQUER o repositório do projeto e, em seguida, trabalhar em seu repositório bifurcado.
-1. Para enviar um patch, um colaborador DEVERÁ criar um pedido de puxar Plataforma para o projeto.
-1. Um colaborador NÃO deve confirmar alterações diretamente no projeto.
-1. Se a Plataforma implementar solicitações de pull como problemas, um Contributor MAY envia diretamente uma solicitação de puxar sem registrar uma questão separada.
-1. Para discutir um patch, as pessoas podem comentar o pedido de tração Platform, no commit ou em outro lugar.
-1. Para aceitar ou rejeitar um patch, um Maintainer DEVE usar a interface Platform.
-1. Os fabricantes não devem fundir seus próprios patches, exceto em casos excepcionais, como a falta de capacidade de resposta de outros Maintainers por um período prolongado (mais de 1-2 dias).
-1. Os responsáveis não devem fazer julgamentos de valor nos patches corretos.
-1. Maintainers deve combinar corretamente os patches de outros contribuidores rapidamente.
-1. Os responsáveis podem combinar patches incorretos de outros Colaboradores com os objetivos de (a) terminar discussões infrutíferas, (b) capturar manchas tóxicas no registro histórico, (c) se envolver com o Colaborador na melhoria da qualidade de seu patch.
-1. O usuário que criou um problema DEVE encerrar o problema depois de verificar o patch foi bem-sucedido.
-1. Qualquer colaborador que tenha julgamentos de valor em um patch DEVE expressá-los através de seus próprios patches.
-1. Os operadores devem fechar problemas de usuários que são deixados abertos sem ação por um período desconfortável.
+1. A mudança no projeto DEVERÁ ser regida pelo padrão de identificar com precisão relaos e aplicar soluções mínimas e precisas a esses relatos.
+1. Para solicitar alterações, um usuário DEVERIA registrar um relato no rastreador de problemas da Plataforma do projeto.
+1. O usuário ou o Colaborador DEVERIA registar descrevendo o relato que enfrentam ou observam.
+1. O usuário ou o Colaborador DEVERIA buscar consenso sobre a precisão de suas observações e o valor de resolver o relato.
+1. Os usuários NÃO DEVERIAM registrar solicitações de recursos, idéias, sugestões ou quaisquer soluções para problemas que não estão explicitamente documentados e prováveis.
+1. Assim, o histórico de lançamento do projeto DEVERÁ ser uma lista de relatos significativos registrados e resolvidos.
+1. Para trabalhar em um relatos, um Colaborador DEVERÁ criar um branch do branch master do projeto e, em seguida, trabalhar em seu branch privado.
+1. Para enviar um patch, um Colaborador DEVERÁ criar uma requisição de merge da Plataforma para o projeto.
+1. Um Colaborador NÃO DEVERÁ commitar alterações diretamente no branch master do projeto.
+1. Para discutir um patch, as pessoas podem comentar a requisição de merge da Platforma, no commit ou em outro lugar.
+1. Para aceitar ou rejeitar um patch, um Mantenedor DEVERÁ usar a interface Platforma.
+1. Os Mantenedores NÃO DEVERÃO fundir seus próprios patches, exceto em casos excepcionais, como a falta de capacidade de resposta de outros Mantenedores por um período prolongado (mais de 1-2 dias).
+1. Os Mantenedores NÃO DEVERÃO fazer julgamentos de valor nos patches corretos.
+1. Os Mantenedores DEVERÃO fazer o merge corretamente dos patches de outros Contribuidores rapidamente.
+1. Os Mantenedores PODERÃO fazer merge de patches incorretos de outros Colaboradores com os objetivos de (a) terminar discussões infrutíferas, (b) capturar patches tóxicos no registro histórico, (c) se envolver com o Colaborador na melhoria da qualidade de seu patch.
+1. O usuário que registrou um relato DEVERIA encerrá-lo depois de verificar se o patch foi bem-sucedido.
+1. Qualquer Colaborador que tenha julgamentos de valor em um patch DEVERIA expressá-los através de seus próprios patches.
+1. Os Mantenedores DEVERIAM fechar problemas de usuários que são deixados abertos sem ação por um período desconfortável.
 
-### 2.5. Sucursais e lançamentos
-1. O projeto DEVE ter uma filial ("mestre") que sempre contém a versão mais recente em progresso e DEVE sempre construir.
-1. O projeto NÃO deve usar sucursais tópicos por qualquer motivo. As garfos pessoais podem usar filiais tópicos.
-1. Para fazer uma versão estável, um Maintainer deve marcar o repositório. Os lançamentos estáveis ​​sempre serão liberados do mestre do repositório.
+### 2.5. Branches e lançamentos
+1. O projeto DEVERÁ ter um branch ("master") que sempre contém a versão mais recente em progresso e DEVERIA sempre passar nos testes de build.
+1. Os branchs privados DEVERÃO sobreviver apenas ao pequeno período do processo de requisição de merge, devendo ser excluídos ao final do processo. 
+1. Para fazer uma versão estável, um Mantenedor DEVERÁ aplicar uma tag no repositório. Os lançamentos estáveis sempre DEVERÃO ser liberados do branch master.
 
 ### 2.6. Evolução de Contratos Públicos
 1. Todos os Contratos Públicos (APIs ou protocolos) DEVEM ser documentados.
