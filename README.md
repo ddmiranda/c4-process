@@ -42,24 +42,23 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 1. Um patch NÃO DEVERÁ incluir código não trivial de outros projetos, a menos que o Colaborador seja o autor original desse código.
 1. Um patch DEVERÁ ser afetatar apenas um componente.
 1. Um patch DEVERÁ compilar de forma limpa e passar nos auto-testes do projeto ao menos para a principal plataforma de destino.
-1. Um patch DEVERÁ deve conter uma mensagem de commit composta por: 
-    - uma unica linha de assunto informando o problema sendo resolvido de forma: 
+1. Um patch DEVERÁ deve conter uma mensagem de commit composta por:
+    - uma unica linha de assunto informando o problema sendo resolvido de forma:
       - curta com até de 50 caracteres,
-      - iniciada com a identificação do componente + ":",
-      - capitalizada,
+      - iniciada com a identificação do componente + ":",
+      - capitalizada,
       - sem pontuação,
       - conjugada no tempo verbal futuro do presente do modo indicativo,
-      - ser capaz de completar a frase "Se aplicado, este patch irá <linha de assunto>",
-      - ex. "contribuinte: Validar dv do cnpj";
-    - uma linha em branco seguida da solução proposta;
-    - uma linha em branco seguido dos metadados: 
+      - ser capaz de completar a frase "Se aplicado, este patch irá <linha de assunto>",
+      - ex. "contribuinte: Validar dv do cnpj";
+    - uma linha em branco seguida da solução proposta;
+    - uma linha em branco seguido dos metadados:
       - "Resolve: idDoProblema",
       - "Criado-por: Nome do Desenvolvedor <email@dominio.com>",
       - "Revisado-por: Nome do Revisor <email@dominio.com>",
       - "Testado-por: Nome do Testador <email@dominio.com>",
       - "Sugerido-por: Nome <email@dominio.com>",
       - "Reportado-por: Nome <email@dominio.com>";
-    - a relação de Colaboradores e suas participações no patch.
 1. Um "Patch Correto" é aquele que satisfaz os requisitos acima.
 
 ### 2.4. Processo de desenvolvimento
