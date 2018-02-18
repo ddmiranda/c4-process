@@ -69,14 +69,14 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 1. Para fazer uma versão estável, um Mantenedor DEVERÁ aplicar uma tag no repositório. Os lançamentos estáveis sempre DEVERÃO ser liberados do branch master.
 
 ### 2.6. Evolução de Contratos Públicos
-1. Todos os Contratos Públicos (APIs ou protocolos) DEVEM ser documentados.
-1. Todos os contratos públicos DEVEM ter espaço para extensibilidade e experimentação.
-1. Um patch que modifica um Contrato público estável NÃO deve quebrar os aplicativos existentes, a menos que exista um consenso primordial sobre o valor de fazer isso.
-1. Um patch que apresenta novos recursos DEVE fazê-lo usando novos nomes (um novo contrato).
-1. Novos contratos DEVEM ser marcados como "rascunho" até serem estáveis ​​e usados ​​por usuários reais.
-1. Os contratos antigos DEVEM ser obsoletos de forma sistemática, marcando-os como "obsoletos" e substituindo-os por novos contratos, conforme necessário.
-1. Quando o tempo foi suficiente, os antigos contratos obsoletos DEVEM ser removidos.
-1. Os antigos nomes NÃO serão reutilizados por novos contratos.
+1. Todos os Contratos Públicos (APIs ou protocolos) DEVERÃO ser documentados.
+1. Todos os Contratos Públicos DEVERIAM ter espaço para extensibilidade e experimentação.
+1. Um patch que modifica um Contrato Público estável NÃO DEVERIA quebrar os aplicativos existentes, a menos que exista um consenso primordial sobre o valor de fazer isso.
+1. Um patch que apresenta novos recursos DEVERIA fazê-lo usando novos nomes (um novo contrato).
+1. Novos contratos DEVERIAM ser marcados como "rascunho" até serem estáveis e usados por usuários reais.
+1. Os contratos antigos DEVERIAM se tornar obsoletos de forma sistemática, marcando-os como "obsoletos" e substituindo-os por novos contratos, conforme necessário.
+1. Após tempo suficiente, os antigos contratos obsoletos DEVERIAM ser removidos.
+1. Os antigos nomes DEVERÃO serão reutilizados por novos contratos.
 
 ### 2.7. Administração do Projeto
 1. Os fundadores do projeto devem atuar como Administradores para gerenciar o conjunto de projetos do Maintainers.
