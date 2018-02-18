@@ -1,13 +1,13 @@
 # Contrato de Construção de Código Coletivo Tupiniquim 
 
 ## Abstrato
-O C4T fornece um processo padrão para contribuir, avaliar e discutir melhorias em projetos de software. Ele define requisitos técnicos específicos para projetos como um guia de estilo, testes de unidade git plataformas similares. Ele também estabelece personagens diferentes para projetos, com tarefas claras e distintas. C4T especifica um processo para documentar e discutir questões, incluindo busca de consenso e descrições claras, uso de "requisição de merge" e revisões sistemáticas.
+O C4T fornece um processo padrão para contribuir, avaliar e discutir melhorias em projetos de software. Ele define requisitos técnicos específicos para projetos como um guia de estilo, testes de unidade git plataformas similares. Ele também estabelece personagens diferentes para projetos, com tarefas claras e distintas. O C4T especifica um processo para documentar e discutir questões, incluindo busca de consenso e descrições claras, uso de "requisição de merge" e revisões sistemáticas.
 
 ## Língua
 As palavras-chave "DEVERÁ", "NÃO DEVERÁ", "REQUERIDO" são usados no contexto Obrigatórias. E as palavras-chave "DEVERIAM", "NÃO DEVERIAM", "RECOMENDADO" e "OPCIONAL" devem ser interpretadas como não obrigatórias. Essas interpretações se baseiam na RFC 2119.
 
 ## 1. Objetivos
-O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para projetos de software de código aberto. Tem esses objetivos específicos:
+O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para projetos de software. Tem esses objetivos específicos:
 1. Para maximizar a escala e a diversidade da comunidade em torno de um projeto, reduzindo a fricção para novos Colaboradores e criando um modelo de participação escalonado com fortes feedbacks positivos;
 1. Para aliviar as dependências em indivíduos-chave, separando diferentes conjuntos de habilidades para que haja um pool maior de competências em qualquer domínio requerido;
 1. Permitir que o projeto se desenvolva de forma mais rápida e precisa, aumentando a diversidade do processo de tomada de decisão;
@@ -18,32 +18,48 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 ## 2. Design
 ### 2.1. Preliminares
 1. O projeto DEVERÁ usar o sistema de controle de revisão distribuído git.
-1. O projeto DEVERÁ ser hospedado em um gitlab corporativo ou equivalente, aqui chamado "Plataforma".
-1. Um relato(issue) descreve alguma alteração a ser realizada no projeto como, por exemplo, uma nova funcionalida ou um defeito.
-1. O projeto DEVERÁ usar o rastreador de relatos da Plataforma.
+1. O projeto DEVERÁ ser hospedado em um servidor git, aqui chamado de "Plataforma".
+1. Um problema(issue) descreve alguma alteração a ser realizada no projeto como, por exemplo, uma nova funcionalida ou um defeito a ser corrigido.
+1. O projeto DEVERÁ usar o rastreador de problemas da Plataforma.
 1. O projeto DEVERIA ter diretrizes claramente documentadas para o estilo de código.
-1. Um patch é um conjunto alterações que resolvem algum relato claramente identificado.
+1. Um patch é um conjunto alterações que resolvem algum problema claramente identificado.
 1. Merge é o processo de cobinar um patch com o projeto.
 1. Um "Mantenedor" é uma pessoa que faz o merge dos patchs. Os Mantenedores não são desenvolvedores; seu trabalho é fazer cumprir o processo.
 1. Um "Colaborador" é uma pessoa que deseja fornecer um patch.
 1. Os Mantenedores DEVERÃO ter acesso ao branch master, aqui chamado de "repositório".
-1. Contribuidores NÃO DEVERÃO ter acesso ao repositório, a menos que também sejam Mantenedores.
+1. Os Colaboradores NÃO DEVERÃO ter acesso ao repositório, a menos que também sejam Mantenedores.
 1. Todos, sem distinção ou discriminação, DEVERÃO ter o mesmo direito de se tornar um Contribuidor nos termos deste contrato.
 
 ### 2.2. Licenciamento e propriedade
-1. O projeto DEVERÁ usar uma licença compartilhada, como o MPLv2, ou uma variante GPLv3 (GPL, LGPL, AGPL).
 1. Todas as contribuições para o código-fonte do projeto ("patchs") DEVERÃO usar a mesma licença que o projeto.
-1. Todos os patches são propriedade de seus autores. NÃO DEVERÁ ter qualquer processo de atribuição de direitos autorais.
 1. Cada colaborador DEVERÁ ser responsável por se identificar na lista de colaboradores do projeto.
 
 ### 2.3. Requisitos do patch
 1. Mantenedores e Colaboradores DEVERÃO ter uma conta da Plataforma e DEVERIAM usar seus nomes reais ou um apelido bem conhecido.
-1. Um patch DEVERIA ser uma resposta mínima e precisa para exatamente um relato identificado e acordado.
+1. Um patch DEVERIA ser uma resposta mínima e precisa para exatamente um problema identificado e acordado.
 1. Um patch DEVERÁ respeitar as diretrizes de estilo de código do projeto se estas forem definidas.
 1. Um patch DEVERÁ respeitar as diretrizes de "Evolução de Contratos Públicos" definidas abaixo.
-1. Um patch NÃO DEVERÁ incluir código não trivial de outros projetos, a menos que o Contribuinte seja o autor original desse código.
-1. Um patch DEVERA compilar de forma limpa e passar nos auto-testes do projeto ao menos para a principal plataforma de destino.
-1. Caso não haja uma diretriz específica para o projetom, uma mensagem de commit de patch DEVERÁ ser composta por uma única linha curta (menos de 50 caracteres) informando o relato sendo resolvido, uma linha em branco seguida da solução proposta, uma linha em branco seguida da relação de Colaboradores e suas participações no patch.
+1. Um patch NÃO DEVERÁ incluir código não trivial de outros projetos, a menos que o Colaborador seja o autor original desse código.
+1. Um patch DEVERÁ ser afetatar apenas um componente.
+1. Um patch DEVERÁ compilar de forma limpa e passar nos auto-testes do projeto ao menos para a principal plataforma de destino.
+1. Um patch DEVERÁ deve conter uma mensagem de commit composta por: 
+    - uma unica linha de assunto informando o problema sendo resolvido de forma: 
+      - curta com até de 50 caracteres,
+      - iniciada com a identificação do componente + ":",
+      - capitalizada,
+      - sem pontuação,
+      - conjugada no tempo verbal futuro do presente do modo indicativo,
+      - ser capaz de completar a frase "Se aplicado, este patch irá <linha de assunto>",
+      - ex. "contribuinte: Validar dv do cnpj";
+    - uma linha em branco seguida da solução proposta;
+    - uma linha em branco seguido dos metadados: 
+      - "Resolve: idDoProblema",
+      - "Criado-por: Nome do Desenvolvedor <email@dominio.com>",
+      - "Revisado-por: Nome do Revisor <email@dominio.com>",
+      - "Testado-por: Nome do Testador <email@dominio.com>",
+      - "Sugerido-por: Nome <email@dominio.com>",
+      - "Reportado-por: Nome <email@dominio.com>";
+    - a relação de Colaboradores e suas participações no patch.
 1. Um "Patch Correto" é aquele que satisfaz os requisitos acima.
 
 ### 2.4. Processo de desenvolvimento
