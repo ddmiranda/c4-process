@@ -33,14 +33,14 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 1. Todos os patches são propriedade de seus autores. NÃO TERÁ qualquer processo de atribuição de direitos autorais.
 1. Cada colaborador será responsável por se identificar na lista de colaboradores do projeto.
 
-### 2.3. Requisitos de patch
+### 2.3. Requisitos do patch
 1. Mantenedores e Colaboradores DEVEM ter uma conta da Plataforma e DEVEM usar seus nomes reais ou um apelido bem conhecido.
 1. Um patch DEVE ser uma resposta mínima e precisa para exatamente um problema identificado e acordado.
 1. Um patch DEVE respeitar as diretrizes de estilo de código do projeto se estas forem definidas.
 1. Um patch DEVE respeitar as diretrizes de "Evolução de Contratos Públicos" definidas abaixo.
-1. Um patch NÃO incluirá código não trivial de outros projetos, a menos que o Contribuinte seja o autor original desse código.
-1. Um patch DEVE compilar de forma limpa e aprovar auto-testes do projeto em pelo menos a principal plataforma de destino.
-1. Uma mensagem de confirmação de patch deve compor uma única linha curta (menos de 50 caracteres) informando o problema ("Problema: ...") sendo resolvido, seguido por uma linha em branco e depois a solução proposta ("Solução: ..." ).
+1. Um patch NÃO DEVE incluir código não trivial de outros projetos, a menos que o Contribuinte seja o autor original desse código.
+1. Um patch DEVE compilar de forma limpa e passar nos auto-testes do projeto ao menos para a principal plataforma de destino.
+1. Uma mensagem de commit de patch DEVE ser composta por uma única linha curta (menos de 50 caracteres) informando o problema sendo resolvido, uma linha em branco seguida da solução proposta, uma linha em brando e a relação de Colaboradores e suas participações no patch.
 1. Um "Correto Patch" é aquele que satisfaz os requisitos acima.
 
 ### 2.4. Processo de desenvolvimento
@@ -57,9 +57,9 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 1. Para discutir um patch, as pessoas podem comentar o pedido de tração Platform, no commit ou em outro lugar.
 1. Para aceitar ou rejeitar um patch, um Maintainer DEVE usar a interface Platform.
 1. Os fabricantes não devem fundir seus próprios patches, exceto em casos excepcionais, como a falta de capacidade de resposta de outros Maintainers por um período prolongado (mais de 1-2 dias).
-1. Os responsáveis ​​não devem fazer julgamentos de valor nos patches corretos.
+1. Os responsáveis não devem fazer julgamentos de valor nos patches corretos.
 1. Maintainers deve combinar corretamente os patches de outros contribuidores rapidamente.
-1. Os responsáveis ​​podem combinar patches incorretos de outros Colaboradores com os objetivos de (a) terminar discussões infrutíferas, (b) capturar manchas tóxicas no registro histórico, (c) se envolver com o Colaborador na melhoria da qualidade de seu patch.
+1. Os responsáveis podem combinar patches incorretos de outros Colaboradores com os objetivos de (a) terminar discussões infrutíferas, (b) capturar manchas tóxicas no registro histórico, (c) se envolver com o Colaborador na melhoria da qualidade de seu patch.
 1. O usuário que criou um problema DEVE encerrar o problema depois de verificar o patch foi bem-sucedido.
 1. Qualquer colaborador que tenha julgamentos de valor em um patch DEVE expressá-los através de seus próprios patches.
 1. Os operadores devem fechar problemas de usuários que são deixados abertos sem ação por um período desconfortável.
