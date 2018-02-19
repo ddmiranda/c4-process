@@ -53,7 +53,7 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
       - ser capaz de completar a frase "Se aplicado, este patch irá <linha de assunto>",
       - ex. "contribuinte: Validar dv do cnpj";
     - uma linha em branco seguida da solução proposta, com margem de até 72 caractéres;
-    - uma linha em branco seguido dos metadados Resolve, Relatado-por, Criado-por.
+    - uma linha em branco seguido dos metadados Resolvem, Resolve-parcialmente, Relatado-por, Criado-por.
 1. Um "Patch Correto" é aquele que satisfaz os requisitos acima e possuí uma mensagem adequada como no exemplo abaixo.
 
 ```
