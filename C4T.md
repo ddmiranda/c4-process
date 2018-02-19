@@ -83,23 +83,18 @@ Testado-por: Aspone Corleone <acorleone@hacker.com>
 1. O usuário ou o Colaborador DEVERIA buscar consenso sobre a precisão de suas observações e o valor de resolver o relato.
 1. Os usuários NÃO DEVERIAM registrar solicitações de recursos, idéias, sugestões ou quaisquer soluções para problemas que não estão explicitamente documentados ou são prováveis.
 1. Assim, o histórico de lançamento do projeto DEVERÁ ser uma lista de probelmas significativos registrados e resolvidos.
-1. Para trabalhar em um problema, um Colaborador DEVERÁ criar um branch privado a partir do branch master do projeto e, em seguida, trabalhar nele.
-1. Para enviar um patch, um Colaborador DEVERÁ criar uma requisição de merge na Plataforma do projeto.
-1. Um Colaborador NÃO DEVERÁ enviar alterações diretamente para o branch master do projeto.
-1. Para discutir um patch, as pessoas podem comentar a requisição de merge da Platforma, no commit ou em outro lugar.
-1. Para aceitar ou rejeitar um patch, um Mantenedor DEVERÁ usar a interface Platforma.
-1. Os Mantenedores NÃO DEVERÃO fazer merge de seus próprios patches, exceto em casos excepcionais, como a falta de capacidade de resposta de outros Mantenedores por um período prolongado (mais de 1-2 dias).
-1. Os Mantenedores NÃO DEVERÃO fazer julgamentos de valor nos patches corretos.
-1. Os Mantenedores DEVERÃO fazer o merge dos patches corretos de outros Contribuidores rapidamente.
-1. Os Mantenedores PODERÃO fazer merge de patches incorretos de outros Colaboradores com os objetivos de (a) terminar discussões infrutíferas, (b) capturar patches tóxicos no registro histórico, (c) se envolver com o Colaborador na melhoria da qualidade de seu patch.
+1. Para trabalhar em um problema, um Colaborador DEVERÁ clonar localmente o branch master do projeto e, em seguida, trabalhar nele.
+1. Para enviar um patch ao branch master do repositório remoto, o Colaborador DEVERÁ se assegurar que ele está correto antes de realizar o merge. Em caso de dificuldade, um Mantenedor DEVERÁ auxiliar no processo.
+1. A partir do branch master, outros colaboradores PODERÃO revisar, testar ou corrigir o patch.
+1. Os Mantenedores DEVERÃO verificar constantemente o repositório e excluir os patchs incorretos rapidamente.
+1. Os Mantenedores PODERÃO manter os patchs incorretos de outros Colaboradores com os objetivos de (a) terminar discussões infrutíferas, (b) capturar patchs tóxicos no registro histórico, (c) se envolver com o Colaborador na melhoria da qualidade de seu patch.
 1. O usuário que registrou um problema DEVERIA encerrá-lo depois de verificar se o patch foi bem-sucedido.
 1. Qualquer Colaborador que tenha julgamentos de valor em um patch DEVERIA expressá-los através de seus próprios patchs.
 1. Os Mantenedores DEVERIAM fechar problemas de usuários que são deixados abertos sem ação por um período desconfortável.
 
 ### 2.5. Branches e Releases
-1. O projeto DEVERÁ ter um branch ("master") que sempre contém a versão mais recente em progresso e DEVERIA sempre passar nos testes de build.
-1. Os patchs DEVERÃO ser desenvolvidos em seus próprios branchs privados.
-1. Os branchs privados DEVERÃO ser locais e DEVERIAM ser enviados ao repositório remoto apenas durante o pequeno período do processo de requisição de merge. Eles DEVERÃO ser excluídos ao final do processo. 
+1. O projeto DEVERÁ ter apenas o branch ("master") que sempre contém a versão mais recente em progresso e DEVERIA sempre passar nos testes de build.
+1. Os branchs privados DEVERÃO ser locais.
 1. Para fazer uma versão estável, um Mantenedor DEVERÁ aplicar uma tag no branch master. Os lançamentos estáveis sempre DEVERÃO ser liberados do branch master.
 
 ### 2.6. Evolução de Contratos Públicos
