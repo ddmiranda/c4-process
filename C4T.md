@@ -23,12 +23,11 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 1. O projeto DEVERÁ usar o rastreador de problemas da Plataforma.
 1. O projeto DEVERIA ter diretrizes claramente documentadas para o estilo de código.
 1. Um patch é um conjunto alterações que resolvem algum problema claramente identificado.
-1. Merge é o processo de cobinar um patch com o projeto.
-1. Um "Mantenedor" é uma pessoa que faz o merge dos patchs. Os Mantenedores não são desenvolvedores; seu trabalho é fazer cumprir o processo.
+1. Merge é o processo de integrar um patch com o projeto.
+1. Um "Mantenedor" é uma pessoa que faz integra os patchs ao projeto ou auxilia os Colaboradores com essa tarefa. Os Mantenedores não são desenvolvedores; seu trabalho é fazer cumprir o processo de desenvolvimento.
 1. Um "Colaborador" é uma pessoa que deseja fornecer um patch.
-1. Os Mantenedores DEVERÃO ter acesso ao branch master.
-1. Os Colaboradores NÃO DEVERÃO ter acesso ao branch master, a menos que também sejam Mantenedores.
-1. Todos, sem distinção ou discriminação, DEVERÃO ter o mesmo direito de se tornar um Contribuidor nos termos deste contrato.
+1. Todos DEVERÃO ter acesso ao branch master.
+1. Todos, sem distinção ou discriminação, DEVERÃO ter o mesmo direito de se tornar um Colaborador nos termos deste contrato.
 
 ### 2.2. Licenciamento e propriedade
 1. Todas as contribuições para o código-fonte do projeto ("patchs") DEVERÃO usar a mesma licença que o projeto.
@@ -40,6 +39,7 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
 1. Um patch DEVERÁ respeitar as diretrizes de estilo de código do projeto se estas forem definidas.
 1. Um patch DEVERÁ respeitar as diretrizes de "Evolução de Contratos Públicos" definidas abaixo.
 1. Um patch NÃO DEVERÁ incluir código não trivial de outros projetos, a menos que o Colaborador seja o autor original desse código.
+1. UM patch DEVERÁ conter provas de seu funcionamento na formas de testes unitários, de integração e aceitação.
 1. Um patch DEVERÁ ser afetar apenas um componente.
 1. Um patch DEVERÁ compilar de forma limpa e passar nos auto-testes do projeto ao menos para a principal plataforma de destino.
 1. Um patch DEVERÁ deve conter uma mensagem de commit composta por:
@@ -52,7 +52,7 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
       - ser capaz de completar a frase "Se aplicado, este patch irá <linha de assunto>",
       - ex. "contribuinte: Validar dv do cnpj";
     - uma linha em branco seguida da solução proposta, com margem de até 72 caractéres;
-    - uma linha em branco seguido dos metadados Resolve, Relatado-por, Criado-por, Revisado-por, Testado-por.
+    - uma linha em branco seguido dos metadados Resolve, Relatado-por, Criado-por.
 1. Um "Patch Correto" é aquele que satisfaz os requisitos acima e possuí uma mensagem adequada como no exemplo abaixo.
 
 ```
@@ -71,9 +71,6 @@ Resolve: #1234
 Relatado-por: Josenildo Produtctowner <jprodutctowner@hacker.com>
 Criado-por: Siclano Torvalds <storvalds@hacker.com>
 Criado-por: Beltrano Torvalds <btorvalds@hacker.com>
-Revisado-por: Frazano Beck <fbeck@hacker.com>
-Revisado-por: Beckham Bauer <bbauer@hacker.com>
-Testado-por: Aspone Corleone <acorleone@hacker.com>
 ```
 
 ### 2.4. Processo de desenvolvimento
@@ -84,8 +81,11 @@ Testado-por: Aspone Corleone <acorleone@hacker.com>
 1. Os usuários NÃO DEVERIAM registrar solicitações de recursos, idéias, sugestões ou quaisquer soluções para problemas que não estão explicitamente documentados ou são prováveis.
 1. Assim, o histórico de lançamento do projeto DEVERÁ ser uma lista de probelmas significativos registrados e resolvidos.
 1. Para trabalhar em um problema, um Colaborador DEVERÁ clonar localmente o branch master do projeto e, em seguida, trabalhar nele.
-1. Para enviar um patch ao branch master do repositório remoto, o Colaborador DEVERÁ se assegurar que ele está correto antes de realizar o merge. Em caso de dificuldade, um Mantenedor DEVERÁ auxiliar no processo.
-1. A partir do branch master, outros colaboradores PODERÃO revisar, testar ou corrigir o patch.
+1. Os Colaboradores DEVERÃO fatiar o problema para que sejam resolvidos em pequenos patchs para que sejam integrados ao menos uma vez ao dia.
+1. Os Colaboradores DEVERÃO programar em pares na resolução dos problemas.
+1. Para integrar um patch ao branch master do repositório remoto, o Colaborador DEVERÁ se assegurar que ele está correto antes de realizar a integração. Em caso de dificuldade, um Mantenedor DEVERÁ auxiliar no processo.
+1. A partir do branch master, outros colaboradores PODERÃO revisar, testar ou corrigir o patch. 
+1. O projeto é de propriedade coletiva, portanto, todos DEVERÃO ser reposáveis e zelar por sua qualidade.
 1. Os Mantenedores DEVERÃO verificar constantemente o repositório e excluir os patchs incorretos rapidamente.
 1. Os Mantenedores PODERÃO manter os patchs incorretos de outros Colaboradores com os objetivos de (a) terminar discussões infrutíferas, (b) capturar patchs tóxicos no registro histórico, (c) se envolver com o Colaborador na melhoria da qualidade de seu patch.
 1. O usuário que registrou um problema DEVERIA encerrá-lo depois de verificar se o patch foi bem-sucedido.
@@ -94,7 +94,7 @@ Testado-por: Aspone Corleone <acorleone@hacker.com>
 
 ### 2.5. Branches e Releases
 1. O projeto DEVERÁ ter apenas o branch ("master") que sempre contém a versão mais recente em progresso e DEVERIA sempre passar nos testes de build.
-1. Os branchs privados DEVERÃO ser locais.
+1. Os Colaboradores PODERÃO ter branchs privados locais.
 1. Para fazer uma versão estável, um Mantenedor DEVERÁ aplicar uma tag no branch master. Os lançamentos estáveis sempre DEVERÃO ser liberados do branch master.
 
 ### 2.6. Evolução de Contratos Públicos
