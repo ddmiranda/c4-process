@@ -54,7 +54,7 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
       - ex. "contribuinte: Validar dv do cnpj";
     - uma linha em branco seguida da solução proposta, com margem de até 72 caractéres;
     - uma linha em branco seguido dos metadados Resolvem, Resolve-parcialmente, Relatado-por, Criado-por.
-1. Um patch DEVERÁ ter todas a informações relevantes que ajudam a contar a história do projeto, de forma linear.
+1. Um patch DEVERÁ ter todas a informações relevantes que ajudam a contar a história do projeto, junto com os demais patchs aprovados.
 1. Um "Patch Correto" é aquele que satisfaz os requisitos acima e possuí uma mensagem adequada como no exemplo abaixo.
 
 ```
