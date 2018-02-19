@@ -4,7 +4,7 @@
 O C4T fornece um processo padrão para contribuir, avaliar e discutir melhorias em projetos de software. Ele define requisitos técnicos específicos para projetos como um guia de estilo, testes de unidade git plataformas similares. Ele também estabelece personagens diferentes para projetos, com tarefas claras e distintas. O C4T especifica um processo para documentar e discutir questões, incluindo busca de consenso e descrições claras, uso de "requisição de merge" e revisões sistemáticas.
 
 ## Língua
-As palavras-chave "DEVERÁ", "NÃO DEVERÁ", "DEVERÃO", "NÃO DEVERÃO", "REQUERIDO" são usados no contexto de obrigatórias. E as palavras-chave "DEVERIA", "NÃO DEVERIA", "DEVERIAM", "NÃO DEVERIAM", "RECOMENDADO" e "OPCIONAL" devem ser interpretadas como não obrigatórias. Livre traduzida aqui, essas interpretações se baseiam na RFC 2119.
+As palavras-chave "DEVERÁ", "NÃO DEVERÁ", "DEVERÃO", "NÃO DEVERÃO", "REQUERIDO" são usados no contexto de obrigatórias. E as palavras-chave "DEVERIA", "NÃO DEVERIA", "DEVERIAM", "NÃO DEVERIAM", "RECOMENDADO" e "OPCIONAL" devem ser interpretadas como não obrigatórias mas altamente recomendadas. Livre traduzida aqui, essas interpretações se baseiam na RFC 2119.
 
 ## 1. Objetivos
 O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para projetos de software. Tem esses objetivos específicos:
