@@ -4,7 +4,7 @@
 O C4T fornece um processo padrão para contribuir, avaliar e discutir melhorias em projetos de software. Ele define requisitos técnicos específicos para projetos como um guia de estilo, testes de unidade git plataformas similares. Ele também estabelece personagens diferentes para projetos, com tarefas claras e distintas. O C4T especifica um processo para documentar e discutir questões, incluindo busca de consenso e descrições claras, uso de "requisição de merge" e revisões sistemáticas.
 
 ## Língua
-As palavras-chave "DEVERÁ", "NÃO DEVERÁ", "DEVERÃO", "NÃO DEVERÃO", "REQUERIDO" são usados no contexto de obrigatórias. E as palavras-chave "DEVERIA", "NÃO DEVERIA", "DEVERIAM", "NÃO DEVERIAM", "RECOMENDADO" e "OPCIONAL" devem ser interpretadas como não obrigatórias mas altamente recomendadas. Livre traduzida aqui, essas interpretações se baseiam na RFC 2119.
+As palavras-chave "DEVERÁ", "NÃO DEVERÁ", "DEVERÃO", "NÃO DEVERÃO", "REQUERIDO" são usados no contexto de obrigatórias. E as palavras-chave "DEVERIA", "NÃO DEVERIA", "DEVERIAM", "NÃO DEVERIAM" e "RECOMENDADO" devem ser interpretadas como não obrigatórias mas altamente recomendadas. Livre traduzida aqui, essas interpretações se baseiam na RFC 2119.
 
 ## 1. Objetivos
 O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para projetos de software. Tem esses objetivos específicos:
@@ -54,6 +54,7 @@ O C4T destina-se a fornecer um modelo de colaboração ideal reutilizável para 
       - ex. "contribuinte: Validar dv do cnpj";
     - uma linha em branco seguida da solução proposta, com margem de até 72 caractéres;
     - uma linha em branco seguido dos metadados Resolvem, Resolve-parcialmente, Relatado-por, Criado-por.
+1. Um patch DEVERÁ ter todas a informações relevantes que ajudam a contar a história do projeto, de forma linear.
 1. Um "Patch Correto" é aquele que satisfaz os requisitos acima e possuí uma mensagem adequada como no exemplo abaixo.
 
 ```
